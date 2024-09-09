@@ -18,6 +18,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import { AirDrop } from './Airdrop';
 import { ShowSolBalance } from './Balance';
+import { SignMessage } from './SingMessage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
               <div>Hi there</div>
               <AirDrop/>
               <ShowSolBalance/>
+              <SignMessage/>
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
