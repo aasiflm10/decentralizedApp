@@ -19,24 +19,24 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 import { AirDrop } from './Airdrop';
 import { ShowSolBalance } from './Balance';
 import { SignMessage } from './SingMessage';
+import { DrawerDefault } from './Drawer';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
       <ConnectionProvider endpoint={"https://solana-devnet.g.alchemy.com/v2/LpiGEE7-J44ti19KVKu4CBNTf7pz54Xo"}>
         <WalletProvider wallets={[]} autoConnect>
           <WalletModalProvider>
-            <WalletMultiButton/>
-            <WalletDisconnectButton/>
-              <div>Hi there</div>
-              <AirDrop/>
-              <ShowSolBalance/>
-              <SignMessage/>
+            <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
+            <DrawerDefault/>
+            </div>
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
+      </div>
     </>
 
   )
